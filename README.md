@@ -3,7 +3,6 @@
 </p>
 
 # 📌 Schdule Management Application
-일정 관리 앱
 
 >- ## ⚙ 구현 기능
 >1. 일정 생성 및 등록
@@ -11,6 +10,54 @@
 >3. 선택 일정 조회
 >4. 선택 일정 수정
 >5. 선택 일정 삭제
+>---
+>- ## 👷‍♂️ API 명세서
+> <table style="border: 2px;" align="center">
+  <tr>
+    <td> 기능</td>
+    <td> Method </td>
+    <td> URL </td>
+    <td> Request </td>
+    <td> Responese </td>
+    <td> StatusCode </td>
+  </tr><tr>
+    <td > 일정 생성 및 등록 </td>
+    <td > POST </td>
+    <td > /api/schedules </td>
+    <td > 요청 body </td>
+    <td > 등록 정보 </td>
+    <td > 200 : 정상등록 </td>
+  </tr><tr>
+    <td > 전체 일정 조회 </td>
+    <td > GET </td>
+    <td > /api/schedules </td>
+    <td > 요청 param </td>
+    <td > 전체 응답 정보 </td>
+    <td > 200 : 정상등록 </td>
+  </tr><tr>
+    <td > 선택 일정 조회 </td>
+    <td > GET </td>
+    <td > /api/schedules/{scheduleId} </td>
+    <td > 요청 param </td>
+    <td > 선택 응답 정보 </td>
+    <td > 200 : 정상등록 </td>
+  </tr><tr>
+    <td > 선택 일정 수정 </td>
+    <td > PUT </td>
+    <td > /api/schedules/{scheduleId} </td>
+    <td > 요청 body </td>
+    <td > 선택 응답 정보 </td>
+    <td > 200 : 정상등록 </td>
+  </tr><tr>
+    <td > 선택 일정 삭제 </td>
+    <td > DELETE </td>
+    <td > /api/schedules/{scheduleId} </td>
+    <td > 요청 param </td>
+    <td > - </td>
+    <td > 200 : 정상등록 </td>
+  </tr>
+</table>
+  
 >---
 >- ## 👷‍♂️ ERD
 >- 
