@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://cdn.imweb.me/thumbnail/20231120/9b1551ea109cf.png" width="20%" height="20%" title="px(픽셀) 크기 설정" alt="Calculator"></img>
+<img src="https://cdn.imweb.me/thumbnail/20231120/9b1551ea109cf.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="Calculator"></img>
 </p>
 
 # 📌 Schdule Management Application
