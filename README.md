@@ -24,7 +24,12 @@
     <td > 일정 생성 및 등록 </td>
     <td > POST </td>
     <td > /api/schedules </td>
-    <td > 요청 body </td>
+    <td > 
+      {
+        "user_id": 1;,
+        "detail":'schedule_detail';
+      }
+    </td>
     <td > 등록 정보 </td>
     <td > 200 : 정상등록 </td>
   </tr><tr>
