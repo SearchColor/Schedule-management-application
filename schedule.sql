@@ -17,7 +17,6 @@ CREATE TABLE `schedule` (
                             `id` int NOT NULL AUTO_INCREMENT,
                             `password` varchar(255) DEFAULT NULL,
                             `user_id` int DEFAULT NULL,
-                            `user_name` varchar(45) DEFAULT NULL,
                             `detail` varchar(255) DEFAULT NULL,
                             `registration_date` date DEFAULT NULL,
                             `modification_date` date DEFAULT NULL,
@@ -28,8 +27,8 @@ CREATE TABLE `schedule` (
 
 
 #일정 생성 쿼리 예시
-Insert into schedule (password, user_id, user_name, registration_date, modification_date)
-values ('test1234','test_id','test_name','2024-10-31','2024-10-31');
+Insert into schedule (password, user_id , registration_date, modification_date)
+values ('test1234','test_id',now(),now());
 
 #전체일정 조회
 Select * from schedule;
@@ -38,7 +37,7 @@ Select * from schedule;
 Select * from schedule where id = 'select_schedule_id';
 
 #선택일정 수정
-Update schedule set detail='modify_detail' where id ='select_schedule_id';
+Update schedule set detail='modify_detail', modification_date=now() where id ='select_schedule_id';
 
 #선택일정 삭제
 Delete from schedule where id = 'select_schedule_id';
