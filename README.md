@@ -16,7 +16,7 @@
   <tr>
     <td> 기능</td>
     <td> Method </td>
-    <td> URL </td>
+    <td> URI </td>
     <td> Request </td>
     <td> Responese </td>
     <td> StatusCode </td>
@@ -76,13 +76,15 @@
 </table>
 >선택일정조회 응답 예시
 
-{<br>
-  "id" : schedule_id ,<br>
-  "user_id" : user_id ,<br>
-  "detail" : 'schedule_detail',<br>
-  "registration_date" : 202x-xx-xx,<br>
-  "modification_date" : 202x-xx-xx<br>
+```java
+{
+  "id" : schedule_id ,
+  "user_id" : user_id ,
+  "detail" : 'schedule_detail',
+  "registration_date" : 202x-xx-xx,
+  "modification_date" : 202x-xx-xx
 }
+```
 
 >
 >---
