@@ -25,44 +25,66 @@
     <td > POST </td>
     <td > /api/schedules </td>
     <td > 
-      {
-        "user_id": 1;,
-        "detail":'schedule_detail';
+      {<br>
+        "user_id" : 1;,<br>
+        "detail" : 'detail';
+      <br>}
+    </td>
+    <td > 
+      {<br>
+        "id": schedule_id, <br>
+        "user_id" : user_id,<br>
+        "detail" : 'detail';<br>
       }
     </td>
-    <td > 등록 정보 </td>
     <td > 200 : 정상등록 </td>
   </tr><tr>
     <td > 전체 일정 조회 </td>
     <td > GET </td>
     <td > /api/schedules </td>
-    <td > 요청 param </td>
+    <td > - </td>
     <td > 전체 응답 정보 </td>
     <td > 200 : 정상등록 </td>
   </tr><tr>
     <td > 선택 일정 조회 </td>
     <td > GET </td>
     <td > /api/schedules/{scheduleId} </td>
-    <td > 요청 param </td>
+    <td > - </td>
     <td > 선택 응답 정보 </td>
     <td > 200 : 정상등록 </td>
   </tr><tr>
     <td > 선택 일정 수정 </td>
     <td > PUT </td>
     <td > /api/schedules/{scheduleId} </td>
-    <td > 요청 body </td>
-    <td > 선택 응답 정보 </td>
+    <td > 
+      {<br>
+        "id": schedule_id, <br>
+        "user_id" : user_id,<br>
+        "detail" : 'detail';<br>
+      } 
+    </td>
+    <td > 선택 수정 정보 </td>
     <td > 200 : 정상등록 </td>
   </tr><tr>
     <td > 선택 일정 삭제 </td>
     <td > DELETE </td>
     <td > /api/schedules/{scheduleId} </td>
-    <td > 요청 param </td>
+    <td > - </td>
     <td > - </td>
     <td > 200 : 정상등록 </td>
   </tr>
 </table>
-  
+>선택일정조회 응답 예시
+
+{<br>
+  "id" : schedule_id ,<br>
+  "user_id" : user_id ,<br>
+  "detail" : 'schedule_detail',<br>
+  "registration_date" : 202x-xx-xx,<br>
+  "modification_date" : 202x-xx-xx<br>
+}
+
+>
 >---
 >- ## 👷‍♂️ ERD
 >- ![스크린샷 2024-10-31 오후 7 26 05](https://github.com/user-attachments/assets/f3bbbed3-4b35-462d-9d43-05d4d20a9dc0)
