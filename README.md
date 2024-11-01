@@ -37,21 +37,38 @@
         "detail" : 'detail';<br>
       }
     </td>
-    <td > 200 : 정상등록 </td>
+    <td > 
+      2xx : 성공<br> 
+      4xx : 실패<br> 
+    </td>
   </tr><tr>
     <td > 전체 일정 조회 </td>
     <td > GET </td>
     <td > /api/schedules </td>
     <td > - </td>
     <td > 전체 응답 정보 </td>
-    <td > 200 : 정상등록 </td>
+    <td > 
+      2xx : 성공<br> 
+      4xx : 실패<br>
+    </td>
   </tr><tr>
     <td > 선택 일정 조회 </td>
     <td > GET </td>
     <td > /api/schedules/{scheduleId} </td>
     <td > - </td>
-    <td > 선택 응답 정보 </td>
-    <td > 200 : 정상등록 </td>
+    <td > 
+      {<br>
+        "id" : schedule_id ,<br>
+        "user_id" : user_id ,<br>
+        "detail" : 'schedule_detail',<br>
+        "registration_date" : 202x-xx-xx,<br>
+        "modification_date" : 202x-xx-xx<br>
+      }
+    </td>
+    <td > 
+      2xx : 성공<br> 
+      4xx : 실패<br>
+    </td>
   </tr><tr>
     <td > 선택 일정 수정 </td>
     <td > PUT </td>
@@ -63,29 +80,50 @@
         "detail" : 'detail';<br>
       } 
     </td>
-    <td > 선택 수정 정보 </td>
-    <td > 200 : 정상등록 </td>
+    <td >
+      {<br>
+        "id" : schedule_id ,<br>
+        "user_id" : user_id ,<br>
+        "detail" : 'schedule_detail',<br>
+        "registration_date" : 202x-xx-xx,<br>
+        "modification_date" : 202x-xx-xx<br>
+      }
+    </td>
+    <td >
+      2xx : 성공<br> 
+      4xx : 실패<br></td>
+    </td>
   </tr><tr>
     <td > 선택 일정 삭제 </td>
     <td > DELETE </td>
     <td > /api/schedules/{scheduleId} </td>
     <td > - </td>
     <td > - </td>
-    <td > 200 : 정상등록 </td>
-  </tr>
+    <td > 
+      2xx : 성공<br> 
+      4xx : 실패<br></td>
+    </tr>
 </table>
->선택일정조회 응답 예시
 
-```java
-{
-  "id" : schedule_id ,
-  "user_id" : user_id ,
-  "detail" : 'schedule_detail',
-  "registration_date" : 202x-xx-xx,
-  "modification_date" : 202x-xx-xx
-}
-```
-
+> 성공 status code
+>
+> 200  :   등록 성공
+>
+> 210  :   조회 성공
+>
+> 220  :   수정 성공
+> 
+> 244  :   삭제 성공
+> 
+> 실패 status code
+> 
+> 401 : 필수 요소 부족으로 인한 등록 실패
+> 
+> 411 : 필수 요소 부족으로 인한 조회 실패
+>
+> 412 : 요청 id 값이 없음으로 인한 조회 실패
+>
+> 441 : 요청 id 값에 없음으로 인한 삭제 실패
 >
 >---
 >- ## 👷‍♂️ ERD
